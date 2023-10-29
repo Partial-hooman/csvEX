@@ -1,5 +1,13 @@
 import streamlit as st
 from tab_numeric.numeric_logics import get_numeric_info 
 
-def display_numeric()
-
+def display_numeric(df):
+    num_cols = []
+    for x in list(df.columns):
+      try:
+        n = [float(i) for i in df[x]]
+        num_cols.append(x)
+      except:
+        pass
+    col = st.selectbox('Which numeric column do you want to explore',num_cols)
+    
