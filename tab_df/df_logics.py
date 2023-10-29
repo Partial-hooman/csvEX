@@ -12,7 +12,7 @@ def get_df_information(df):
     columns = []
     columns_dtype = []
     column_memory = list(df.memory_usage(index = False))
-    for x in list(df.columns)
+    for x in list(df.columns):
         try:
          n =  [float(ele) for ele in df[x]]
          Columns.append(x)
