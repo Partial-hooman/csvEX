@@ -13,3 +13,7 @@ def get_numeric_info(col):
         num_neg = num_neg + 1
   avg=sum(values)/len(values)
   std=statistics.stdev(values)
+  max_val=max(values)
+  min_val=min(values)
+  median_val=statistics.median(values)
+  return uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val
