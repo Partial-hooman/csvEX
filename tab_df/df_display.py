@@ -13,3 +13,9 @@ def df_display(df):
     with st.expander('Explore Dataframe'):
          rows = st.slider('Select the number of rows to be displayed',min_value=5,max_value=50)
          method = st.radio('Exploration Method',['Head','Tail','Sample'])
+         if method == 'Head':
+            st.dataframe(df.head(rows))
+         elif method == 'Tail':
+            st.dataframe(df.tail(rows))
+         elif method == 'Sample':
+            st.dataframe(df.sample(rows))
