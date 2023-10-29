@@ -11,4 +11,5 @@ def df_display(df):
          table2 = {'column':columns,'Data_type':columns_dtype,'memory':column_memory}
          st.table(table2)
     with st.expander('Explore Dataframe'):
-         pass
+         rows = st.slider('Select the number of rows to be displayed',min_value=5,max_value=50)
+         method = st.radio()
