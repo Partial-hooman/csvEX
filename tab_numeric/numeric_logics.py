@@ -1,4 +1,4 @@
-import pandas
+import pandas as pd
 import statistics
 def get_numeric_info(col):
   uniq_val = len(Counter(col).keys())
