@@ -10,4 +10,5 @@ def display_numeric(df):
       except:
         pass
     col = st.selectbox('Which numeric column do you want to explore',num_cols)
-    
+    uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val = get_numeric_info(df[col]) 
+    tble = {'Description':['Number of unique values','Number of missing values']}
