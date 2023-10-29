@@ -12,4 +12,4 @@ def df_display(df):
          st.table(table2)
     with st.expander('Explore Dataframe'):
          rows = st.slider('Select the number of rows to be displayed',min_value=5,max_value=50)
-         method = st.radio()
+         method = st.radio('Exploration Method',['Head','Tail','Sample'])
