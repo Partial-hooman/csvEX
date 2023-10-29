@@ -1,3 +1,5 @@
+import pandas
+from tab_df.df_display import df_display
 import streamlit as st
 uploaded_file = st.file_uploader("Choose a CSV file")
 if uploaded_file is not None:
