@@ -5,12 +5,12 @@ from dateutil.parser import parse
 
 
 def get_df_information(df):
-    Number_of_Rows = len(df)
-    Number_of_Columns = len(df.columns)
-    Number_of_Duplicated_Rows = len(df) - len(df.drop_duplicates())
-    Number_of_Rows_with_Missing_Values = df.isnull().sum().sum()
-    Columns = []
-    Column_dtype = []
+    Num_rows = len(df)
+    num_columns = len(df.columns)
+    No_duplicate_rows = len(df) - len(df.drop_duplicates())
+    num_missing_val = df.isnull().sum().sum()
+    columns = []
+    columns_dtype = []
     column_memory = list(df.memory_usage(index = False))
     for x in list(df.columns)
         try:
