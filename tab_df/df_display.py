@@ -1,5 +1,5 @@
 import streamlit
-from df_logics import get_df_information
+from tab_df.df_logics import get_df_information
 import pandas
 
 def df_display(df):
