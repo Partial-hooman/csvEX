@@ -5,9 +5,9 @@ from dateutil.parser import parse
 
 
 def get_df_information(df):
-    Num_rows = len(df)
+    num_rows = len(df)
     num_columns = len(df.columns)
-    No_duplicate_rows = len(df) - len(df.drop_duplicates())
+    no_duplicate_rows = len(df) - len(df.drop_duplicates())
     num_missing_val = df.isnull().sum().sum()
     columns = []
     columns_dtype = []
