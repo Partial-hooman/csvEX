@@ -28,4 +28,5 @@ def get_text_column_info(col):
         if x not in unick_vals:
            unick_vals.append(x)
            occurences.append(list(col).count(x))
-           
+           percentages.append((list(col).count(x)/len(list(col)))*100)
+    return uniq_val_len, missing_val, empty_rows, whitespace_no, lowercase_no, uppercase_no, alphabet_no, digit_no, mode_val, unick_vals, occurences, percentages   
