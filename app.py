@@ -1,4 +1,4 @@
-import pandas
+import pandas as pd
 from tab_df.df_display import df_display
 import streamlit as st
 uploaded_file = st.file_uploader("Choose a CSV file")
