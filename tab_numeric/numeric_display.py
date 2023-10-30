@@ -1,5 +1,6 @@
 import streamlit as st
 from tab_numeric.numeric_logics import get_numeric_info 
+import altair as alt
 
 def display_numeric(df):
     num_cols = []
@@ -10,5 +11,13 @@ def display_numeric(df):
       except:
         pass
     col = st.selectbox('Which numeric column do you want to explore',num_cols)
-    uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val = get_numeric_info(df[col]) 
-    tble = {'Description':['Number of unique values','Number of missing values']}
+    uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val, unique_vals, occurence, percntage = get_numeric_info(df[col]) 
+    tble = {'Description':['Number of unique values','Number of Rows with missing values','Number of Rows with 0','Number of Rows with Negative Values','Average Value','Standard Deviation Value','Minimum Value','Median Value'],"Value":[uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val]}
+    with st.expander('Numeric Column'):
+         st.table(tble)
+     with st.expander('Histogram chart'):
+         hist = alt.Chart().mark_bar(tble).encode(x = 'Description',  y = 'Value') 
+         st.altair_chart(hist)
+     with st.expander('Most Frequent Values'):
+         st.table({'Value':unique_vals, 'occurence':occurence, 'percentage':percntage})
+         
