@@ -15,11 +15,13 @@ def get_df_information(df):
     for x in list(df.columns):
         try:
          n =  [float(ele) for ele in df[x]]
+         df[x] = n
          Columns.append(x)
          Column_dtype.append('numeric')
         except:
          try:
           t = [parse(i) for i in df[x]]
+          df[x] = t
           Columns.append(x)
           Column_dtype.append('date')
          except:
