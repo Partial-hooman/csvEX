@@ -22,4 +22,4 @@ def display_date(df):
         hist1 = alt.Chart().mark_bar(dt_table).encode(x = 'Values',  y = 'count()') 
         st.altair_chart(hist1)
     with st.expander('Most Frequent Values'):
-        
+        st.table({'Value':unic_vals[0:21], 'occurence':occurencess[0:21], 'percentage':percentagess[0:21]})
