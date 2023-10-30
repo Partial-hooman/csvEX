@@ -6,7 +6,7 @@ from tab_date.date_display import display_date
 import streamlit as st
 uploaded_file = st.file_uploader("Choose a CSV file")
 if uploaded_file is not None:
-   numeric_display
+   df = pd.read_csv(uploaded_file)
    tab1, tab2, tab3, tab4 = st.tabs(["Dataframe", "Numeric Series", "Text Series", "Datetime Series"])
    with tab1:
      df_display(df)
