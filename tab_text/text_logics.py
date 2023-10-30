@@ -1,6 +1,6 @@
 import pandas as pd
 from statistics import mode
-
+from collections import Counter
 def get_text_info(col):
     uniq_val_len = len(Counter(list(col)).keys())
     missing_val = col.isna().sum()
