@@ -10,4 +10,4 @@ def display_text(df):
     with st.expander('Text Column'):
          st.table(text_tble)
     with st.('Bar Chart'):
-         
+         hist = alt.Chart().mark_bar(tble).encode(x = 'Description',  y = 'Value')
