@@ -1,4 +1,4 @@
-import streamlit
+import streamlit as st
 from tab_df.df_logics import get_df_information
 import pandas
 
