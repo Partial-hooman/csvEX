@@ -1,6 +1,7 @@
 import streamlit as st
 from tab_text.text_logics import get_text_info 
 import altair as alt
+import pandas as pd
 
 def display_text(df):
     text_cols = [ col  for col, dt in df.dtypes.items() if dt == object]
