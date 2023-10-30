@@ -25,4 +25,4 @@ def get_numeric_info(col):
       percntage.append((list(col).count(x)/len(list(col)))*100)
       
   
-  return uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val, unique_vals, occurence, percntage
+  return uniq_val_len, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val, unique_vals, occurence, percntage
