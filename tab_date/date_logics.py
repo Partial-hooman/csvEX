@@ -12,6 +12,9 @@ def get_date_info(col):
     rows_with_1970_01_01 = 0
     minima_val = min(list(col))
     maxima_val = max(list(col))
+    unick_vals = []
+    occurences = []
+    percentages = []
     for x in col:
         if x.weekday() < 5:
            weekday_date_no += 1
