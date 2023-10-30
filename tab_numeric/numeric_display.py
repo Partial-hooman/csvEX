@@ -12,7 +12,7 @@ def display_numeric(df):
         pass
     col = st.selectbox('Which numeric column do you want to explore',num_cols)
     uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val, unique_vals, occurence, percntage = get_numeric_info(df[col]) 
-    tble = {'Description':['Number of unique values','Number of Rows with missing values','Number of Rows with 0','Number of Rows with Negative Values','Average Value','Standard Deviation Value','Minimum Value','Median Value'],"Value":[uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val]}
+    tble = {'Description':['Number of unique values','Number of Rows with missing values','Number of Rows with 0','Number of Rows with Negative Values','Average Value','Standard Deviation Value','Minimum Value','Maximum Value','Median Value'],"Value":[uniq_val, missing_val, n_zeroes, num_neg, avg, std, max_val, min_val, median_val]}
     with st.expander('Numeric Column'):
          st.table(tble)
     with st.expander('Histogram chart'):
