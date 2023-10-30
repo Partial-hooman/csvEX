@@ -1,8 +1,8 @@
 import pandas as pd
 from tab_df.df_display import df_display
-from tab_numeric.numeric_display import numeric_display
-from tab_text.text_display import text_display
-from tab_date.date_display import date_display
+from tab_numeric.numeric_display import display_numeric
+from tab_text.text_display import display_text
+from tab_date.date_display import display_date
 import streamlit as st
 uploaded_file = st.file_uploader("Choose a CSV file")
 if uploaded_file is not None:
@@ -11,9 +11,9 @@ if uploaded_file is not None:
    with tab1:
      df_display(df)
    with tab2:
-     numeric_display(df)
+     display_numeric(df)
    with tab3:
-     text_display(df)
+     display_text(df)
    with tab4:
-     date_display(df)
+     display_date(df)
 
