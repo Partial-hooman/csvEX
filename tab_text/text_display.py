@@ -10,4 +10,7 @@ def display_text(df):
     with st.expander('Text Column'):
          st.table(text_tble)
     with st.('Bar Chart'):
-         hist = alt.Chart().mark_bar(tble).encode(x = 'Description',  y = 'Value')
+         bar = alt.Chart().mark_bar(text_tble).encode(x = 'Description',  y = 'Value')
+         st.altair_chart(bar)
+    with st.('Most Frequent Values'):
+         
