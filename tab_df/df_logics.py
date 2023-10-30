@@ -17,14 +17,14 @@ def get_df_information(df):
          n =  [float(ele) for ele in df[x]]
          df[x] = n
          columns.append(x)
-         column_dtype.append('numeric')
+         columns_dtype.append('numeric')
         except:
          try:
           t = [parse(i) for i in df[x]]
           df[x] = t
           columns.append(x)
-          column_dtype.append('date')
+          columns_dtype.append('date')
          except:
           columns.append(x)
-          column_dtype.append('text')
+          columns_dtype.append('text')
     return num_rows, num_columns, no_duplicate_rows, num_missing_val, columns, columns_dtype, column_memory 
