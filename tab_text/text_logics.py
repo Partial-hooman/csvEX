@@ -1,7 +1,7 @@
 import pandas as pd
 from statistics import mode
 
-def get_text_column_info(col):
+def get_text_info(col):
     uniq_val_len = len(Counter(list(col)).keys())
     missing_val = col.isna().sum()
     empty_rows = list(col).count('')
