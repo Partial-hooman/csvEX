@@ -13,4 +13,4 @@ def display_date(df):
         date_cols.append(x)
       except:
         pass
-    date_col = 
+    date_col = st.selectbox('Which date column do you want to explore',date_cols)
