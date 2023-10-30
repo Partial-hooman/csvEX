@@ -1,5 +1,6 @@
 import pandas as pd
 import statistics
+from collections import Counter
 def get_numeric_info(col):
   uniq_val_len = len(Counter(list(col)).keys())
   missing_val = col.isna().sum()
