@@ -1,7 +1,7 @@
 import streamlit as st
 from tab_numeric.numeric_logics import get_numeric_info 
 import altair as alt
-
+import pandas as pd
 def display_numeric(df):
     num_cols = []
     for x in list(df.columns):
@@ -16,7 +16,8 @@ def display_numeric(df):
     with st.expander('Numeric Column'):
          st.table(tble)
     with st.expander('Histogram chart'):
-         hist = alt.Chart().mark_bar(tble).encode(x = 'Value',  y = 'count()') 
+         dataf = pd.DataFrame(tble)
+         hist = alt.Chart().mark_bar(dataf).encode(x = 'Value',  y = 'count()') 
          st.altair_chart(hist)
     with st.expander('Most Frequent Values'):
          st.table({'Value':unique_vals[0:21], 'occurence':occurence[0:21], 'percentage':percntage[0:21]})
