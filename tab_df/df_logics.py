@@ -16,15 +16,15 @@ def get_df_information(df):
         try:
          n =  [float(ele) for ele in df[x]]
          df[x] = n
-         Columns.append(x)
-         Column_dtype.append('numeric')
+         columns.append(x)
+         column_dtype.append('numeric')
         except:
          try:
           t = [parse(i) for i in df[x]]
           df[x] = t
-          Columns.append(x)
-          Column_dtype.append('date')
+          columns.append(x)
+          column_dtype.append('date')
          except:
-          Columns.append(x)
-          Column_dtype.append('text')
+          columns.append(x)
+          column_dtype.append('text')
     return num_rows, num_columns, no_duplicate_rows, num_missing_val, columns, columns_dtype, column_memory 
