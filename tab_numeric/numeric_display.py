@@ -19,5 +19,6 @@ def display_numeric(df):
          hist = alt.Chart().mark_bar(tble).encode(x = 'Description',  y = 'Value') 
          st.altair_chart(hist)
      with st.expander('Most Frequent Values'):
-         st.table({'Value':unique_vals, 'occurence':occurence, 'percentage':percntage})
+         st.table({'Value':unique_vals[0:21], 'occurence':occurence[0:21], 'percentage':percntage[0:21]})
+         
          
